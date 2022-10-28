@@ -1,11 +1,8 @@
-
 function getComputerChoice() {
     const options = ['rock', 'paper', 'scissor'];
     const choice = options[Math.floor(Math.random() * options.length)];
     return choice;
 }
-
-//console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {        
     if (playerSelection === 'rock' && computerSelection === 'scissor') {
@@ -25,31 +22,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerScore = 0;
-let computerScore = 0;
-
 function game() {
     for (i = 0; i < 5; i++) {
         const playerChoice = prompt("Pick a move: ");
         const playerSelection = playerChoice.toLowerCase();
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`PlayerScore: ${playerScore} ComputerScore: ${computerScore}`);
-        
+        console.log(playRound(playerSelection, computerSelection));        
     }
 }
 
-function score() {
+let playerScore = 0;
+let computerScore = 0;
+
+function scoreCount() {    
     if (playerScore > computerScore) {
-        return "Victory! You Won";
+        return `Victory! Your Score: ${playerScore} Computer Score: ${computerScore}`;
     } else if (playerScore < computerScore) {
-        return "Defeat! You Lose";
+        return `Defeat! Your Score: ${playerScore} Computer Score: ${computerScore}`;
     } else {
-        return "Tie";
+        return `Tie! Your Score: ${playerScore} Computer Score: ${computerScore}`;
     }
 }
 
 game();
-
-console.log(score());
-
+console.log(scoreCount());
