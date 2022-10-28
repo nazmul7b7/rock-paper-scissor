@@ -35,10 +35,21 @@ function game() {
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
         console.log(`PlayerScore: ${playerScore} ComputerScore: ${computerScore}`);
+        
+    }
+}
+
+function score() {
+    if (playerScore > computerScore) {
+        return "Victory! You Won";
+    } else if (playerScore < computerScore) {
+        return "Defeat! You Lose";
+    } else {
+        return "Tie";
     }
 }
 
 game();
 
-
+console.log(score());
 
