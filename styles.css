@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url(images/background1.jpg);
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    padding: 16px;
+    font-size: 3rem;    
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+   
+}
+
+.content {
+    border: 5px solid rgb(236, 208, 208);
+    max-width: 60%;
+    width: 500px;    
+    margin: 16px auto;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: brown;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.answer {
+    line-height: 2.7rem;
+    font-size: 2rem;
+    padding: 16px;
+}
+
+p {
+    font-size: 1.5rem;
+}
