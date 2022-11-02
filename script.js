@@ -74,7 +74,7 @@ function playRound(playerSelection, computerSelection) {
 
 const game = (playerChoice) => {
     const computerSelection = getComputerChoice();
-    const winner = playRound(computerSelection, playerChoice);
+    const winner = playRound(playerChoice, computerSelection);
     if (winner === "Player") return "Player won";
     else if (winner === "Machine") return "Machine won";
     else return "Tie";
